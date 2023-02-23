@@ -10,67 +10,77 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style.css">    
+    <script src="app.js"></script>
 
 </head>
 <body>
-    <form>
-        <h1 class="mb-2">User List</h1>
-        <h3 class="mb-5">Enter Details Below: </h3>
+    <h1 class="mb-2">User List</h1>
+    <h3 class="mb-5">Enter Details Below: </h3>
+    <form class="form-whole" onsubmit="return newUser()">
 
         <div class="mb-4">
             <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" aria-describedby="name">
+            <input type="text" class="form-control" id="name">
         </div>
 
         <div class="mb-4">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
         </div>
 
         <div class="mb-4">
+            <!-- DOB -->
             <label for="exampleInputEmail1" class="form-label">Date of Birth</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="date" class="form-control" id="dateOb" aria-describedby="emailHelp">
         </div>
 
-        <div class="mb-4">
-            <label for="exampleInputEmail1" class="form-label">Gender</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
+        <fieldset class="mb-4">
+            <!-- Gender -->
+            <legend class="form-label">Gender</legend>
+            
+            <div>
+                <input type="radio" name="gender" id="male" value="male" >
+                <label for="male">Male</label>
+            </div>
+
+            <div>
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female">Female</label>        
+            </div>
+
+            <div>
+                <input type="radio" name="gender" id="other" value="other">
+                <label for="other">Other</label>
+            </div>
+        </fieldset>
 
         <div class="mb-4">
             <label for="exampleInputEmail1" class="form-label">Hobby</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="text" class="form-control" id="hobby" aria-describedby="emailHelp">
         </div>
 
         <div class="mb-4">
             <label for="exampleInputEmail1" class="form-label">Country</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></div>
+            <input type="text" class="form-control" id="country" aria-describedby="emailHelp"></div>
 
 
         <div class="mb-4">
             <label for="exampleInputEmail1" class="form-label">State</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="text" class="form-control" id="state" aria-describedby="emailHelp">
         </div>
-
+        
         <div class="mb-4">
             <label for="exampleInputEmail1" class="form-label">City</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="text" class="form-control" id="city" aria-describedby="emailHelp">
         </div>
 
-        <div class="mb-4">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            
-        </div>
-        <div class="mb-4">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-        </div>
-        <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
+        
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+
+    <div class="display-list">
+        <ul id="user-list"></ul>
+    </div>
+
 </body>
 </html>

@@ -1,3 +1,19 @@
 body{
     margin: 50px;
 }
+
+.form-control{
+    width: 350px;
+}
+
+label{
+    font-size: 18px;
+}
+
+legend{
+    font-size: 18px;
+}
+
+fieldset>div>label{
+    font-size: 16px;
+}
